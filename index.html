@@ -140,6 +140,89 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-事件冒泡&amp;事件捕获" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/06/02/事件冒泡&事件捕获/">事件冒泡与事件捕获</a>
+    </h1>
+  
+
+        
+        <a href="/2018/06/02/事件冒泡&事件捕获/" class="archive-article-date">
+  	<time datetime="2018-06-02T06:53:06.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-06-02</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="冒泡"><a href="#冒泡" class="headerlink" title="冒泡"></a>冒泡</h3><p>  html:<br>  <code>&lt;div id=&quot;parent&quot;&gt;
+　　    &lt;div id=&quot;child&quot; class=&quot;child&quot;&gt;&lt;/div&gt;
+  &lt;/div&gt;</code><br> js:<br><code>document.getElementById(&quot;parent&quot;).addEventListener(&quot;click&quot;,function(e){
+alert(&quot;parent事件被触发，&quot;+this.id);
+})
+document.getElementById(&quot;child&quot;).addEventListener(&quot;click&quot;,function(e){
+alert(&quot;child事件被触发，&quot;+this.id)
+})</code><br>
+        
+          <a class="article-more-a" href="/2018/06/02/事件冒泡&事件捕获/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">js</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2018/06/02/事件冒泡&事件捕获/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-判断变量是数组还是对象" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -160,7 +243,7 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>value是数组：Object.prototype.toString.call(value)===”[object Array]”<br>value是对象：Object.prototype.toString.call(value)===”[object Object]”</p>
+        <p>value是数组：<code>Object.prototype.toString.call(value)===&quot;[object Array]&quot;</code><br>value是对象：<code>Object.prototype.toString.call(value)===&quot;[object Object]&quot;</code></p>
 
       
 
@@ -236,7 +319,7 @@
       
         <h3 id="一、原理"><a href="#一、原理" class="headerlink" title="一、原理"></a>一、原理</h3><ol>
 <li>定义：JavaScript”预解析”，可以理解为把变量或函数预先解析到它们被使用的环境中。</li>
-<li>通俗点讲，即认为浏览器在正式运行JavaScript代码前，<br>第一步，会预先根据关键字var、function等，来查找一些需要被解析的东西，<br>例如：var a = 1; function test(){ alert(2); };<br>第二步，给这些需要被解析的东西提前赋值，其中包括：<br>⑴ 所有的变量，提前赋值：undefined；<br>⑵ 所有的函数，在正式运行代码前，都赋值为整个函数块。<br>第三部，“预解析”结束后，浏览器再逐行解读代码，并通过表达式：= + - * – ++ !等来修改这些“预解析”的值。<br>
+<li>通俗点讲，即认为浏览器在正式运行JavaScript代码前，<br>第一步，会预先根据关键字var、function等，来查找一些需要被解析的东西，<br>例如：var a = 1; function test(){ alert(2); };<br>第二步，给这些需要被解析的东西提前赋值，其中包括：<br>⑴ 所有的变量，提前赋值：undefined；<br>⑵ 所有的函数，在正式运行代码前，都赋值为整个函数块。<br>第三部，“预解析”结束后，浏览器再逐行解读代码，并通过表达式：= + - * – ++ !等来修改这些“预解析”的值。
         
           <a class="article-more-a" href="/2018/05/29/JS预解析/#more">more >></a>
         
@@ -428,7 +511,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
     
     	<section class="tools-section tools-section-me" q-show="aboutme">
   	  	
-  	  		<div class="aboutme-wrap" id="js-aboutme">曾经在幽幽暗暗反反复复中追问&lt;br&gt;才知道平平淡淡从从容容是最真！&lt;br&gt;           --姜育恒</div>
+  	  		<div class="aboutme-wrap" id="js-aboutme">曾经在幽幽暗暗反反复复中追问&lt;br&gt;才知道平平淡淡从从容容是最真！&lt;br&gt;--姜育恒</div>
   	  	
     	</section>
     
